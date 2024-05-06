@@ -4,6 +4,8 @@
 //2) u have to put the variable before calling it
 //3) js start from the top and use the last value it founds
 //4) when u do a function, u have to call it in order to display something in the console
+//5) string vs number= string wins!
+//recap: script tag - variables - numbers- strings - console.log() - functions - the DOM - getElementById() - innerText - textContent
 
 // let count = 0
 
@@ -82,19 +84,74 @@
 // console.log(lapsCompleted)
 
 
-//exercise8) grab the count-el element, store it in a countEl variable
+// //exercise8) grab the count-el element, store it in a countEl variable
+// let countEl = document.getElementById("count-el")
+// let count=0
+
+// function increment(){
+//     count = count + 1
+//     countEl.innerText= count
+// }
+
+// //exercise9) create a function, save(), which logs out the count when it's called
+
+// function save(){
+//     console.log(count)
+// }
+
+// save()
+
+// //exercise10) create a variable, message, that stores the string: u have 3 new notifications
+// let username = "zanto"
+// let message = "You have three new notifications:"
+
+
+// //exercise11) create a variable called messageToUser, that contains the message we have logged
+// let messageToUser = message+username+"!"
+// console.log(messageToUser)
+
+
+// //exercise12) create two variables, name and greeting. the name variable should store your name
+// let name = "thiago"
+// // and the greeting should store "Hi, my name is "
+// let greeting ="Hi, my name is "
+// //create a third variable. myGreeting, that concatenates the two strings
+// let myGreeting = greeting+name
+// //log myGreeting to the console
+// console.log(myGreeting)
+
+
+// //exercise13) resolve this!
+// console.log(4+5)
+// // 9
+// console.log("2" + "4")
+// //24
+// console.log("5"+1)
+// //51
+// console.log(100+"100")
+// //100100
+
+// exercise17) grab the save-el paragraph and store it in a variable called saveEL
 let countEl = document.getElementById("count-el")
-let count=0
+let count = 0
+let saveEL = document.getElementById("save-el")
 
 function increment(){
-    count = count + 1
-    countEl.innerText= count
+    count+=1
+    countEl.textContent=count
 }
-
-//exercise9) create a function, save(), which logs out the count when it's called
-
+//exercise18) 
 function save(){
+    //create a variable that contains both the count and the dash separator
+    let countStr = count + " - "
+    //((exercise20) reset the count when the save button is clicked)
+    count = 0
+    countEl.textContent=count
+    //render the variable in the saveEL using innerText
+    //(exercise19)find why theres is no space and fix it)
+    saveEL.textContent += countStr
+    //make sure to not delete the existing content of the paragraph
     console.log(count)
 }
 
-save()
+
